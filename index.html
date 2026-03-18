@@ -464,10 +464,17 @@
       display: flex; align-items: center; justify-content: center;
       font-size: 1.2rem;
       transition: transform 0.2s, border-color 0.2s;
+      animation: heartbeat 1.4s ease-in-out infinite;
     }
     .egg-btn:hover {
-      transform: scale(1.1);
       border-color: var(--gold);
+    }
+    @keyframes heartbeat {
+      0%, 100% { transform: scale(1); }
+      15% { transform: scale(1.2); }
+      30% { transform: scale(1); }
+      45% { transform: scale(1.15); }
+      60% { transform: scale(1); }
     }
     .egg-popup {
       position: absolute;
@@ -670,7 +677,7 @@
 
 <!-- ── EASTER EGG ── -->
 <div class="easter-egg" id="easterEgg">
-  <div class="egg-btn" onclick="toggleEgg()">🌾</div>
+  <div class="egg-btn" onclick="toggleEgg()">🤍</div>
   <div class="egg-popup" id="eggPopup">
     you found the hidden message.<br><br>
     <em style="color: var(--gold);">hey, babe.</em><br>
